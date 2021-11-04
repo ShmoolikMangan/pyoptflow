@@ -1,4 +1,6 @@
+import numpy as np
 from matplotlib.pyplot import figure, draw, pause, gca
+from matplotlib.colors import Normalize as mplNorm
 from pathlib import Path
 
 
@@ -8,7 +10,8 @@ def plotderiv(fx, fy, ft):
     ax = fg.subplots(1, 3)
 
     for f, a, t in zip((fx, fy, ft), ax, ("$f_x$", "$f_y$", "$f_t$")):
-        h = a.imshow(f, cmap="bwr")
+        mx = np.absolute(f).max()
+        h = a.imshow(f, cmap="bwr", norm=mplNorm(vmin=-mx, vmax=mx, clip=False))
         a.set_title(t)
         fg.colorbar(h, ax=a)
 

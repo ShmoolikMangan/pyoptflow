@@ -8,6 +8,8 @@ def getimgfiles(stem: Path, pat: str) -> list:
 
     stem = Path(stem).expanduser()
 
+    assert stem.exists(), f'getimgfiles error: invalid path: {stem}'
+
     print("searching", stem / pat)
 
     flist = sorted([f for f in stem.glob(pat) if f.is_file()])

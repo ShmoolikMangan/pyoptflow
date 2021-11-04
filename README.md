@@ -33,31 +33,31 @@ The program scripts expect `directory` `glob pattern`
 **Box:**
 
 ```sh
-python HornSchunck.py src/pyoptflow/data/tests/box box*.bmp
+python Horn_Schunck.py src/pyoptflow/data/tests/box box*.bmp
 ```
 
 **Office**: all time steps:
 
 ```sh
-python HornSchunck.py src/pyoptflow/data/tests/office office*.bmp
+python Horn_Schunck.py src/pyoptflow/data/tests/office office*.bmp
 ```
 
 or just the first 2 time steps:
 
 ```sh
-python HornSchunck.py src/pyoptflow/data/tests/office office.[0-2].bmp
+python Horn_Schunck.py src/pyoptflow/data/tests/office office.[0-2].bmp
 ```
 
 **Rubic**:
 
 ```sh
-python HornSchunck.py src/pyoptflow/data/tests/rubic rubic*.bmp
+python Horn_Schunck.py src/pyoptflow/data/tests/rubic rubic*.bmp
 ```
 
 **Sphere**
 
 ```sh
-python HornSchunck.py src/pyoptflow/data/tests/sphere sphere*.bmp
+python Horn_Schunck.py src/pyoptflow/data/tests/sphere sphere*.bmp
 ```
 
 Compare: Matlab Computer Vision toolbox: in [matlab](./matlab),
